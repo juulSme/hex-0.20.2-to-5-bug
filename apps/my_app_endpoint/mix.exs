@@ -26,11 +26,7 @@ defmodule MyAppEndpoint.Mixfile do
       mod: {MyAppEndpoint.Application, []},
       extra_applications: [
         :logger,
-        :runtime_tools,
-        :my_app,
-        :my_app_api,
-        :my_app_cms,
-        :my_app_notifier
+        :runtime_tools
       ]
     ]
   end
@@ -44,19 +40,16 @@ defmodule MyAppEndpoint.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.0"},
-      {:phoenix_pubsub, "~> 1.0"},
+      {:cors_plug, "~> 2.0"},
+      {:cowboy, "~> 2.6"},
+      {:gettext, "~> 0.14"},
+      {:my_app, in_umbrella: true},
       {:phoenix_ecto, "~> 4.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.1", only: :dev},
-      {:gettext, "~> 0.14"},
-      {:cowboy, "~> 2.6"},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix, "~> 1.4.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:my_app, in_umbrella: true},
-      {:my_app_api, in_umbrella: true},
-      {:my_app_cms, in_umbrella: true},
-      {:my_app_notifier, in_umbrella: true},
-      {:cors_plug, "~> 2.0"}
     ]
   end
 

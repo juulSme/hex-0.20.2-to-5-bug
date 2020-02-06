@@ -26,9 +26,6 @@ defmodule MyApp.Umbrella.Mixfile do
   # Dependencies listed here are available only for this project
   # and cannot be accessed from applications inside the apps folder
   defp deps do
-    [
-      {:jose, "1.9.0"},
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
-    ]
+    []
   end
 end
